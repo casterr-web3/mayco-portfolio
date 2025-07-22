@@ -229,35 +229,6 @@ section {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-  /* .art-item::before {
-  content: "Press for full size";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  color: white;
-  font-weight: bold;
-  padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 8px;
-  opacity: 0;
-  z-index: 2;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  white-space: nowrap;
-}  */
-
-/* .art-item::after {
-  content: '';
-  position: absolute;
-  inset: 12px;
-  background: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-  border-radius: 8px;
-}  */
-
 .art-item:hover:not(.clicked)::before {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
