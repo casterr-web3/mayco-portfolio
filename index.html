@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayco's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav class="nav-dots">
+    <a href="#hero" class="active"></a>
+    <a href="#gallery"></a>
+    <a href="#about"></a>
+    <a href="#contact"></a>
+  </nav>
+  
+  <div class="main-content">
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">Mayco</div>
+        <ul class="nav-links">
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Painting the Orange Future, One Stroke at a Time.</h1>
+          <p>- Sign Artist</p>
+        </div>
+        <div class="artist-highlight">
+          <div class="artist-image-container">
+            <img src="https://i.imgur.com/e4DUqvo.jpeg" alt="Artist Portrait" class="artist-image">
+          </div>
+          <div class="highlight-circle"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h2>Featured Works</h2>
+      <div class="gallery-grid">
+        <div class="art-item">
+          <div class="art-item-inner">
+            <img src="https://i.imgur.com/ZZuZAiH.jpeg" alt="Artwork 1">
+            <div class="art-info">
+              <h3>Sign Daddy</h3>
+              <button class="fullsize-btn" data-image="https://i.imgur.com/ZZuZAiH.jpeg" data-title="Sign Daddy">Full Size</button>
+            </div>
+          </div>
+        </div>
+        <div class="art-item">
+          <div class="art-item-inner">
+            <img src="https://i.imgur.com/VcOAqm2.jpeg" alt="Artwork 2">
+            <div class="art-info">
+              <h3>Cutest Mod Zoe</h3>
+              <button class="fullsize-btn" data-image="https://i.imgur.com/VcOAqm2.jpeg" data-title="Cutest Mod Zoe">Full Size</button>
+            </div>
+          </div>
+        </div>
+        <div class="art-item">
+          <div class="art-item-inner">
+            <img src="https://i.imgur.com/rwKPFP7.jpeg" alt="Artwork 3">
+            <div class="art-info">
+              <h3>Sign Sensei</h3>
+              <button class="fullsize-btn" data-image="https://i.imgur.com/rwKPFP7.jpeg" data-title="Sign Sensei">Full Size</button>
+            </div>
+          </div>
+        </div>
+        <div class="art-item">
+          <div class="art-item-inner">
+            <img src="https://i.imgur.com/o3qIAJb.jpeg" alt="Artwork 4">
+            <div class="art-info">
+              <h3>Sign Intern</h3>
+              <button class="fullsize-btn" data-image="https://i.imgur.com/o3qIAJb.jpeg" data-title="Sign Intern">Full Size</button>
+            </div>
+          </div>
+        </div>
+        <div class="art-item">
+          <div class="art-item-inner">
+            <img src="https://i.imgur.com/Iz1SSCn.jpeg" alt="Artwork 5">
+            <div class="art-info">
+              <h3>Zoe's Doggo</h3>
+              <button class="fullsize-btn" data-image="https://i.imgur.com/Iz1SSCn.jpeg" data-title="Zoe's Doggo">Full Size</button>
+            </div>
+          </div>
+        </div>    
+        <div class="art-item">
+          <div class="art-item-inner">
+            <img src="https://i.imgur.com/XUlr3pB.jpeg" alt="Artwork 6">
+            <div class="art-info">
+              <h3>Canvas</h3>
+              <button class="fullsize-btn" data-image="https://i.imgur.com/XUlr3pB.jpeg" data-title="Canvas">Full Size</button>
+            </div>
+          </div>
+        </div>    
+        <div class="art-item">
+          <div class="art-item-inner">
+            <img src="https://i.imgur.com/hXfPMox.jpeg" alt="Artwork 7">
+            <div class="art-info">
+              <h3>Personal Avatar</h3>
+              <button class="fullsize-btn" data-image="https://i.imgur.com/hXfPMox.jpeg" data-title="Personal Avatar">Full Size</button>
+            </div>
+          </div>
+        </div>    
+        <div class="art-item">
+          <div class="art-item-inner">
+            <img src="https://i.imgur.com/6jO3lKv.jpeg" alt="Artwork 8">
+            <div class="art-info">
+              <h3>Sign Turtle</h3>
+              <button class="fullsize-btn" data-image="https://i.imgur.com/6jO3lKv.jpeg" data-title="Sign Turtle">Full Size</button>
+            </div>
+          </div>
+        </div>
+        <div class="art-item">
+          <div class="art-item-inner">
+            <img src="https://i.imgur.com/mIlSoSH.jpeg" alt="Artwork 3">
+            <div class="art-info">
+              <h3>Sign Daddy Merch</h3>
+              <button class="fullsize-btn" data-image="https://i.imgur.com/mIlSoSH.jpeg" data-title="Sign Daddy Merch">Full Size</button>
+            </div>
+          </div>
+        </div>  
+        <div class="art-item">
+          <div class="art-item-inner">
+            <img src="https://i.imgur.com/Pt9F1SZ.jpeg" alt="Artwork 3">
+            <div class="art-info">
+              <h3>Pia's Sticker Set</h3>
+              <button class="fullsize-btn" data-image="https://i.imgur.com/Pt9F1SZ.jpeg" data-title="Pia's Sticker Set">Full Size</button>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-content">
+        <h2>About Me:</h2>
+        <p>Lovingly nicknamed the "Sign Artist" by our cutest mod, Zoe, I create art that embodies the heart of the SIGN ecosystem - vibrant, orange-themed, and filled with purpose.</p>
+        <p>From digital strokes to traditional canvases, my arts reflect a personal journey of becoming my best self, one artwork at a time.</p>
+        <p>This isn’t just art. It’s a signature. 🧡</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get in Touch</h2>
+      <div class="contact-content">
+        <p>Interested in learning more about my work or commissioning a piece?</p>
+        
+        <div class="social-buttons">
+          <a href="mailto:mayco.maycy@gmail.com" class="social-button email">
+            <div class="button-front">
+              <i class="far fa-envelope"></i>
+              <span>Email</span>
+            </div>
+            <div class="button-back"></div>
+          </a>
+
+          <a href="https://x.com/mayco_maycy" class="social-button twitter" target="_blank" rel="noopener">
+            <div class="button-front">
+              <i class="fab fa-twitter"></i>
+              <span>Twitter</span>
+            </div>
+            <div class="button-back"></div>
+          </a>
+          
+          <a href="https://www.instagram.com/mayco.maycy" class="social-button instagram" target="_blank" rel="noopener">
+            <div class="button-front">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </div>
+            <div class="button-back"></div>
+          </a>
+          
+          <a href="https://www.youtube.com/@mayco_razon" class="social-button youtube" target="_blank" rel="noopener">
+            <div class="button-front">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube</span>
+            </div>
+            <div class="button-back"></div>
+          </a>
+
+          <a href="https://www.tiktok.com/@maycorazo.on" class="social-button tiktok" target="_blank" rel="noopener">
+            <div class="button-front">
+              <i class="fab fa-tiktok"></i>
+              <span>TikTok</span>
+            </div>
+            <div class="button-back"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 Mayco. All rights reserved.</p>
+    </footer>
+  </div>
+  
+  <!-- Full-size modal overlay -->
+  <div id="fullsize-modal" class="fullsize-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="close-btn">&times;</button>
+      <div class="fullsize-art-container">
+        <img id="fullsize-image" src="" alt="">
+        <h3 id="fullsize-title"></h3>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
