@@ -56,7 +56,7 @@ function createOrange() {
   const container = document.createElement('div');
   container.className = 'orange-container';
   const img = document.createElement('img');
-  img.src = './images/orange.png';
+  img.src = './images/orange.PNG';
   img.className = 'orange';
   img.alt = 'Orange';
   container.appendChild(img);

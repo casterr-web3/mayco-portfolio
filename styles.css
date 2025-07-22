@@ -111,7 +111,7 @@ section {
 }
 
 .hero h1 {
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #333;
   opacity: 0;
@@ -133,29 +133,129 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 40px;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeUpIn 0.8s 0.4s forwards;
+  overflow: visible;
+  perspective: 1000px;
+}
+
+.artist-highlight::before {
+  content: '';
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ff9a44 0%,
+    #ff6b35 30%,
+    #e65100 70%
+  );
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 
+    0 0 80px rgba(255, 107, 53, 0.7),
+    0 0 140px rgba(255, 107, 53, 0.5),
+    inset 25px 25px 50px rgba(255, 255, 255, 0.2),
+    inset -25px -25px 50px rgba(0, 0, 0, 0.3);
+  animation: float 6s ease-in-out infinite, glow 3s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+}
+
+.artist-highlight::after {
+  content: '';
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(0,0,0,0.1) 1px, transparent 1px) 0 0 / 25px 25px,
+    radial-gradient(circle at 70% 70%, rgba(0,0,0,0.1) 1px, transparent 1px) 0 0 / 25px 25px;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0.3;
+  animation: rotate 40s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotateY(0deg);
+    border-radius: 50% 45% 55% 50% / 50% 50% 55% 50%;
+  }
+  25% {
+    transform: translateY(-10px) rotateY(5deg);
+    border-radius: 50% 50% 50% 50% / 45% 55% 50% 55%;
+  }
+  50% {
+    transform: translateY(0) rotateY(0deg);
+    border-radius: 45% 50% 50% 55% / 50% 50% 50% 50%;
+  }
+  75% {
+    transform: translateY(-10px) rotateY(-5deg);
+    border-radius: 50% 50% 55% 50% / 50% 45% 50% 50%;
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 
+      0 0 60px rgba(255, 107, 53, 0.6),
+      0 0 100px rgba(255, 107, 53, 0.4),
+      inset 20px 20px 40px rgba(255, 255, 255, 0.2),
+      inset -20px -20px 40px rgba(0, 0, 0, 0.3);
+  }
+  to {
+    box-shadow: 
+      0 0 80px rgba(255, 107, 53, 0.8),
+      0 0 120px rgba(255, 107, 53, 0.6),
+      inset 20px 20px 40px rgba(255, 255, 255, 0.3),
+      inset -20px -20px 40px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .artist-image-container {
-  width: 400px;
-  height: 400px;
+  width: 440px;
+  height: 440px;
   position: relative;
-  z-index: 2;
-  border-radius: 20px;
+  z-index: 3;
+  border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  border: 10px solid rgba(255, 255, 255, 0.9);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fff;
+  animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+  75% { transform: translateY(-5px) rotate(-1deg); }
 }
 
 .artist-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.artist-image:hover {
+.artist-image-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.artist-image-container:hover .artist-image {
   transform: scale(1.05);
 }
 
